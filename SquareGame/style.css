@@ -1,0 +1,90 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#header{
+   height :8%;
+    width: 100%;
+    background-color: yellow;
+    /* align-content: center; */
+    /* text-align: center; */
+    
+}
+#header h1{
+    font-size: xx-large;
+    color: rgb(0, 0, 0);
+    padding-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: rgb(135, 72, 72);
+    position:fixed
+    
+}
+#header p{
+    
+    font-size: smaller;
+    color: rgb(198, 190, 190);
+    /* padding-top: 20px; */
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-weight: bold;
+    margin-left: 70%;
+   
+}
+#header :hover{
+    color:blue;
+    cursor: pointer;
+}
+.head h1:hover{
+    color: royalblue;
+    cursor: pointer;
+}
+
+.head p:hover{
+    cursor: pointer;
+    color: royalblue;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main{
+    height:92%;
+    width:100%;
+    background-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.rect{
+    display:flex;
+    
+}
+
+.shape{
+    height:200px;
+    width:200px;
+    border: 1px solid black;
+    font-family: 'Montsterrat';
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.h1{
+    font-size: 30px;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  /* Mobile styles here */
+}
