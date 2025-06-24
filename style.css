@@ -1,402 +1,44 @@
 *{
-    margin: 0%;
-    padding : 0%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:0%;
+    padding:0%;
+    box-sizing:border-box;
 }
 html,body{
-    height: 100%;
-    width :100%;
+    width:100%;
+    height:100%;
+   
 }
 #main{
-    height: 100%;
-    width: 100%;
-  
-}
-#header{
-    height: 13%;
-    width: 100%;
-    background-color: white;
-    position: fixed;/*for fixed in the postion*/
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-
-    
-}
-#logo{
-    height: 70%;
-    margin: 30px;
-}
-#logo img{
-    width :100%;
-    height :100%;
-    object-fit: cover;
-}
-.texts{
-    color: black;
-    /*background-color: antiquewhite;*/
-    margin: 20px;
-}
-.texts:hover{
-    color: blue;
-}
-#contact{
-    text-align: center;
-    /*margin-left: 40px;*/
-    font-weight: lighter;
-}
-#contact1:hover{
-    color: blue;
-
-}
-.icon{
-    margin: 20px;
-    padding :10px;
-    
-}
-.icon:hover{
-    border-radius: 50%;
-    background-color: aqua;
-
-}
-#login{
-    display: flex;
-    margin-left: 20px;
-}
-#try{
-    margin:30px;
-    background-color: green;
-    padding: 10px 10px;
-
-}
-#try{
-    color:white;
-    border-radius:10px;
-}
-#try:hover{
-    background-color:rgb(24, 51, 209);
-    
-}
-#login:hover{
-    background-color: blue;
-    padding: 10px 10px;
-    border-radius: 50%;
-
-
-}
-
-#page1{
-    height: 87%;
-    width: 100%;
-    background-color: beige;
-}
-#strip{
+    height:100%;
     width:100%;
-    height:10%;/*for main*/
-    background-color: blue;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    color:white;
-
-}
-#content{
-     width:100%;
-     height:74%;
-     display:flex;
-     justify-content: space-around;
-}
-#heading{
-     width:100%;
-     height:16%;
-     background-color: beige;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-
-}
-#heading h1{
-    font-weight: 400;
-}
-#btns{
-    display: flex;
-}
-#btn1{
-    text-align: center;
-    margin : 10px;
-    width : 25%;
-    padding : 10px 20px;
-    color: black;
-    background-color: lightgrey;
-    border-radius: 50px ;
-    border-color: black;
-}
-#btn1:hover{
-    background-color: rgb(21, 39, 175);
-    color: antiquewhite;
-}
-#btn2{
-    text-align: center;
-    margin : 10px;
-    width:25%;
-    padding : 10px 20px;
-    color: rgb(10, 89, 116);
-    border: 1px solid lightblue;
-    border-radius: 50px ;
-    border-color: black;
-}
-#btn2:hover{
-    color:black;
-    background-color: aquamarine;
-
-}
-
-#heading h1:hover{
-    color: blue;
-    font-weight: 700;
-}
-#box1{ 
-    height: 100%;
-    width:50%;
-    margin: 10px;
-   
-
-
-}
-#box1 h1{
-    font-weight: 800;
-    color:rgb(2, 2, 74);
-    font-size:50px ;
-    margin:35px 10px;
-}
-#box1 p{
-    font-size: 20px;
-    line-height-step: 0.5%;
-    margin:10px;
-    margin:35px 10px;
-}
-#box2{
-    height: 100%;
-    width:50%;
-    margin: 10px;
-    
-
-}
-#video video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   
-    
-}
-#page2{
-    height: 87%;
-    width: 100%;
-    background-color: beige;
-    display: flex;
-     align-items: center;
-     justify-content: center;
-     justify-content: space-around;
-
-  
-    
-}
-.card{
-     margin-top: 40px ; margin-left : 40px;
-    height : 200px;
-    width : 200px;
-    background:pink;
-    border: 1px solid rgb(136, 35, 230);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 45px;
-}
-.card:hover{
-    background:rgb(176, 14, 130);
-    height: 300px;
-    width:300px;
-    
-}
-#card1{
-    width :200px;
-    height: 200px;
-    background-color: rgb(122, 80, 161);
-    border-color: rgb(149, 26, 26);
-    display: flex;
-     align-items: center;
-     justify-content: center;
-    justify-content: space-around;
-    margin :10px;
-    
-    /*border-radius:30%;*/
-    border-color: blanchedalmond;
-}
-.card img{
-    width: 200px;
-    height: 200px;
-     object-fit: cover;
-}
-#strips{
-    
-    height:13%;/*for main*/
-    text-align: center;
-    margin : 10px;
-    width : 25%;
-    padding : 10px 20px;
-    background-color: beige;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    color:blue;
-    border-radius: 60% ;
-    border-color: rgb(255, 0, 217);
-    
-}
-#strips:hover{
-    color:rgb(186, 26, 52);
-    background-color: black;
-    align-content: center;
-    
-}
-#bont{
-    align-self: center;
-     align-content: center;
-     border-radius: 30px;
-     border-color: blue;
-
-}
-#bont h2{
-     align-self: center;
-     align-content: center;
-     align-items: center;
-     border-radius: 200px;
-     justify-items: center;
-     justify-content: center;
+    flex-wrap: wrap;
      
 
-
 }
-#footer {
-    width: 100%;
-    height: 200px;
-    background-color: #f1f5f9;
-    display: flex;
+.card{
+    height:150px;
+    width:120px;
+    border :1px solid black;
+    border-radius: 10px;
+    margin-top:10px; 
+    margin-left:10px;
+    display:flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-}
-
-#view-products-btn {
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #0070d2;
-    border: 2px solid #0070d2;
-    background-color: white;
-    border-radius: 8px;
+    overflow: hidden;
     cursor: pointer;
-    transition: all 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(142, 122, 122, 0.9); 
+   
+}
+.card img{
+   
+    width: 120px;
+    border-radius: 10px;
+    /* margin:10px; */
+
+     /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);  */
 }
 
-#view-products-btn:hover {
-    background-color: #0070d2;
-    color: white;
-}
-#page3{
-   height: 87%;
-    width: 100%;
-    background-color: beige;
-    align-content: center;
-    align-items: center;
-    text-align: center;
-}
-#btnos{
-     display: flex;
-     align-items: center;
-     align-content: center;
-     margin-top: 10%;
-     margin-bottom: 10%;
-     margin-left: 30%;
-     margin-right: 10%;
-
-}
-#btn3{
-    text-align: center;
-    margin : 10px;
-    margin-left: 10px;
-    width : 10%;
-    padding : 20px 60px;
-    color: black;
-    background-color: lightgrey;
-    border-radius: 50px ;
-    border-color: black;
-    align-items: center;
-     align-content: center;
-
-}
-#btn3:hover{
-     background-color: rgb(21, 39, 175);
-    color: antiquewhite;
-
-}
-#btn4{
-    text-align: center;
-    margin : 10px;
-    margin-left: 10px;
-    width:10%;
-    padding : 20px 60px;
-    color: rgb(10, 89, 116);
-    border: 1px solid lightblue;
-    border-radius: 50px ;
-    border-color: black;
-    align-items: center;
-     align-content: center;
-
-}
-#btn4:hover{
-    color:black;
-    background-color: aquamarine;
-}
-#salt h1{ 
-    font-weight: bolder;
-    color:rgb(2, 2, 74);
-    font-size:50px ;
-    margin:35px 10px;
-    text-align: center;
-}
-#salt p{
-    font-size: 20px;
-    line-height-step: 0.5%;
-    margin:10px;
-    margin:35px 10px;
-    text-align: center;
-
-}
-#skill{
-    background-color: beige;
-}
-#skill h1{ 
-    font-weight: bolder;
-    color:rgb(2, 2, 74);
-    font-size:10px ;
-    margin:35px 10px;
-    text-align: center;
-}
-#skill p{
-    font-size: 20px;
-    line-height-step: 0.5%;
-    margin:10px;
-    margin:35px 10px;
-    text-align: center;
-    padding : 20px 60px;
-
-}
-
-
-
-#fakeheadre{
-    height: 13%;
-    width: 100%;
-    background-color: rgb(218, 214, 10);
-}
