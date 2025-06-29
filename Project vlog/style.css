@@ -1,0 +1,275 @@
+/* Reset and Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* z-index: 999; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+nav h1 {
+  font-size: 2.4rem;
+  color: #222;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul li {
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav ul li:hover {
+  /* color: yellowgreen; */
+  border-bottom: 2px solid yellowgreen;
+}
+
+nav i {
+  font-size: 2.4rem;
+}
+
+/* Hero Section */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero_image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.hero_content {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero_content h1 {
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero_content h4 {
+  font-size: 2rem;
+  color: #777;
+}
+
+/* Horizontal Card */
+.h-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  background: white;
+  max-width: 1100px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.h-card img {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.card-content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Vertical Cards */
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.v-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.v-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.v-card .card-content {
+  padding: 1.5rem;
+}
+
+/* Status Row */
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.read-btn {
+  all: unset;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid yellowgreen;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.read-btn:hover {
+  background-color: yellowgreen;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #eee;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .h-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+footer p:hover{
+    text-decoration: underline;
+    color:blue
+
+}
+/* post page */
+.banner_image{
+    width:100%;
+    display: flex;
+
+}
+.banner_image h1{
+    size:xx-large;
+    align-content: center;
+    text-align: center;
+    text-decoration: solid;
+    justify-content: center;
+    box-shadow: 2px solid black;
+    border: 1px solid blue;
+    border-radius: 20px;
+    margin: auto;
+ padding:0%;
+ border-bottom: #777;
+}
+.banner_image h1:hover{
+    /* text-decoration: underline; */
+    color:yellowgreen;
+}
+.banner_image img{
+    width:500px;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    align-self: center;
+    border-radius: 30px;
+
+}
+.post h1{
+    font-size:3rem;
+}
+.post hr{
+    margin: 3rem 0;
+}
+.about-author{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+
+article{
+    display:flex;
+    flex-direction: column;
+    gap:3rem;
+    margin-bottom: 2rem;
+
+
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
