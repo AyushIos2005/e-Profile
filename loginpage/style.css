@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  background-image: url(https://images.unsplash.com/photo-1594175268654-e60bea6c037c?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login {
+  background-color: white;
+  width: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.15); /* Transparent white */
+  /* backdrop-filter: blur(10px);                Glass blur effect */
+  /* -webkit-backdrop-filter: blur(10px);        Safari support */
+  border-radius: 12px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #fff; /* Ensures text is visible on dark backgrounds */
+}
+
+header {
+  background-color: #2F4F7F;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.username i {
+  margin-right: 10px;
+  color: #2F4F7F;
+}
+
+.username input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: black;
+}
+
+.para1 {
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.loginbtn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.loginbtn button {
+  background-color: #2F4F7F;
+  color: white;
+  padding: 10px 30px;
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.loginbtn button:hover {
+  background-color: #1a3659;
+}
+
+.para2 p {
+  font-size: 13px;
+  text-align: center;
+  margin: 30px 0 15px;
+  color: black;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.btn button {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.btn button:hover {
+  background-color: green;
+  color: white;
+}
+
+button i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+  color: black;
+}
+
+footer p:hover {
+  color: #2F4F7F;
+  text-decoration: underline;
+  font-weight: bold;
+}
+header, .para2 p, footer p, .loginbtn button {
+  color: white;
+}
+.username input {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.username input::placeholder {
+  color: #ddd;
+}
+@media (max-width: 480px) {
+  #login {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .loginbtn button {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .btn {
+    flex-direction: column;
+  }
+
+  .btn button {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  header {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .para1, .para2 p, footer {
+    font-size: 12px;
+  }
+}
+
