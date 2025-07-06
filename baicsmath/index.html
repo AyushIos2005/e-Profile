@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div id="text"><h2>CodeHub</h2></div>
+    <div id="icon">
+      <i class="ri-verified-badge-fill"></i>
+      <a href="#" target="_blank" style="text-decoration: none; color: white;"><i class="ri-github-fill"></i></a>
+      <i class="ri-instagram-fill"></i>
+    </div>
+  </header>
+
+  <!-- Player Info Form -->
+  <div class="background" id="userFormScreen">
+    <div class="box">
+      <h2>Enter Your Details</h2>
+      <form id="userForm">
+        <!-- <input style="color:antiquewhite" type="text" id="playerName" name="name" placeholder="enter your name" required /> -->
+        <i class="ri-user-3-line"> Enter Your Name<input style="color:antiquewhite" type="text" id="playerName" name="name" required /></i>
+        <!-- <input type="email" id="playerEmail" name="email" placeholder="Enter your E-mail " required /> -->
+        <i class="ri-mail-line"> Enter Your E-mail<input type="email" id="playerEmail" name="email"  required /></i>
+
+        <button type="submit" class="primary-btn">Start Quiz</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div class="background" id="quizScreen" style="display: none;">
+    <div class="box">
+      <h3 id="userGreeting"></h3>
+      <h2>Score → <span id="score">0</span></h2>
+      <h3 id="question">Q. Loading...</h3>
+      <form id="Questionform" onsubmit="checkAnswer(event)">
+        <input required type="number" name="answer" id="answerInput" placeholder="Enter answer" step="any" />
+        <button class="primary-btn" type="submit">Submit</button>
+      </form>
+      <p id="timer"></p>
+      <p id="attempts"></p>
+    </div>
+  </div>
+
+  <!-- End Screen -->
+  <div class="background" id="endScreen" style="display: none;">
+    <div class="box">
+      <h2 id="endMessage">🎉 Quiz Finished!</h2>
+      <p id="finalScore"></p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
