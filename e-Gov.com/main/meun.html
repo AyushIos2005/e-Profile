@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e_GOV - One Platform for All Government Works</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Header Start -->
+    <header>
+        <nav class="container">
+            <a href="#hero" class="logo-icon"><i class="ri-government-fill"></i></a>
+            <div class="logo">
+                <h2>e_GOV</h2>
+                <p>Powered by VGI</p>
+            </div>
+            <ul>
+                <a href="#" onclick="openLogin()"><li>Login</li></a>
+                <a href="#hero"><li>Overview</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#video"><li>Video</li></a>
+                <a href="#updates"><li>Updates</li></a>
+            </ul>
+        </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="hero" class="hero fade-in">
+        <div id="image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Official_portrait_of_the_Prime_Minister_Narendra_Modi%2C_November_2020_%28cropped%29.jpg/2008px-Official_portrait_of_the_Prime_Minister_Narendra_Modi%2C_November_2020_%28cropped%29.jpg"
+                alt="Prime Minister of India">
+        </div>
+
+        <div id="text">
+            <p>"Today, I am proud to say that this website, powered by VGI, stands as a symbol of India's progress in digital innovation."</p>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <section id="about" class="about fade-in">
+        <h2>About Our Mission</h2>
+        <p>e_GOV, powered by VGI, is a unified digital platform designed to simplify every official government task for Indian citizens.</p>
+    </section>
+
+    <section class="overview services fade-in">
+        <h2>Services We Provide</h2>
+        <ul>
+            <li>Aadhar Updation / Correction</li>
+            <li>Pan Card Apply / Correction</li>
+            <li>Ration Card Apply / Update</li>
+            <li>Driving License Apply / Renewal</li>
+            <li>Passport Services</li>
+            <li>Birth / Death Certificate</li>
+            <li>Government Schemes Enrollment</li>
+            <li>Property Tax / Land Records</li>
+            <li>Educational Certificates</li>
+            <li>All Digital India Services</li>
+        </ul>
+    </section>
+
+    <section id="video" class="video fade-in">
+        <h2>How It Works</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-link" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <section id="updates" class="updates fade-in">
+        <h2>Latest Updates from Government</h2>
+        <ul>
+            <li>✔ Digital India 2025 New Guidelines Released</li>
+            <li>✔ Aadhar Linking Date Extended</li>
+            <li>✔ Government Job Portal Integration Soon</li>
+            <li>✔ New Schemes for Farmers & Youth Announced</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 e_GOV. Powered by VGI. Trusted by Government of India.</p>
+    </footer>
+
+    <button onclick="scrollToTop()" class="top-btn">↑ Top</button>
+
+    <!-- Login Popup Start -->
+    <div class="login-popup" id="login-popup">
+        <div class="login-box">
+            <h2>Login to e_GOV</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <button class="register-btn"><a href="/signup.html">Register</a></button>
+            <button class="close-btn" onclick="closeLogin()">Close</button>
+        </div>
+    </div>
+    <!-- Login Popup End -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>

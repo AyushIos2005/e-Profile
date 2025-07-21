@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form id="signup-form">
+            <header>
+                <h1>Regester</h1>
+                <h4>e_Gov</h4>
+            </header>
+
+            <input type="text" placeholder="Enter Your Name" id="name" name="name" required>
+            <input type="email" placeholder="Enter Your Email" id="email" name="email" required>
+            <input type="password" placeholder="Enter Password" id="password" name="password" required>
+            <input type="date" name="date" id="date" required>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number" required pattern="[0-9]{10}">
+            
+            <div class="checkbox-container">
+                <input type="checkbox" id="check" name="check" required>
+                <label for="check">I hereby declare that the information provided by me is true and correct.</label>
+            </div>
+
+            <button type="submit" id="sbtm">
+             Signup</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,245 @@
+
+/* COMMON RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #007BFF;
+    padding: 15px 30px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTAINER LAYOUT */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.logo h2 {
+    font-size: 1.7rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav ul li:hover {
+    color: #ff0;
+    transform: scale(1.05);
+}
+
+/* SECTION COLORS */
+.hero {
+    background-color: #eaf4ff;
+}
+
+.about {
+    background-color: #fff4e6;
+}
+
+.overview {
+    background-color: #e6ffe6;
+}
+
+.video {
+    background-color: #fff0f5;
+}
+
+.updates {
+    background-color: #f0f8ff;
+}
+
+/* GENERAL SECTION LAYOUT */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    transition: background-color 0.5s;
+}
+
+#image img {
+    width: 200px;
+    border-radius: 50%;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#text p {
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+/* OVERVIEW SERVICE LIST */
+.overview ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: auto;
+}
+
+.overview li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.overview li:hover {
+    background-color: #d9ffd9;
+    transform: translateX(5px);
+}
+
+/* VIDEO SECTION */
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.02);
+}
+
+/* FOOTER */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* BUTTON STYLE */
+button, .register-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+button:hover, .register-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.register-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+/* LOGIN POPUP */
+.login-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-popup.show {
+    display: flex;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.login-box input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-box input:focus {
+    outline: 2px solid #007BFF;
+}
+
+/* SCROLL-TO-TOP BUTTON */
+.top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top-btn.show {
+    display: block;
+}
+
+/* FADE-IN EFFECT */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s, transform 1s;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
