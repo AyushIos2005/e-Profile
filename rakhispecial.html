@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rakhi Slider Surprise 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      overflow-x: hidden;
+      animation: backgroundAnimation 15s ease infinite; /* Add animation */
+      background: linear-gradient(270deg, #ff7e5f, #feb47b, #ff7e5f, #feb47b); /* Initial gradient */
+      background-size: 400% 400%; /* For smooth animation */
+    }
+
+    @keyframes backgroundAnimation {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 100% 50%; }
+      50% { background-position: 0% 50%; }
+      75% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      width: 100%;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      opacity: 0; /* Start hidden */
+      animation: fadeIn 0.6s forwards; /* Fade in animation */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .quote-box {
+      background-color: rgba(255, 228, 236, 0.9);
+      margin-top: 1rem;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 10px;
+      color: #b3005e;
+      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transform: translateY(20px); /* Start slightly below */
+      opacity: 0; /* Start hidden */
+      animation: slideIn 0.6s forwards; /* Slide in animation */
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .arrow-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .arrow-btn:hover {
+      background-color: rgba(255, 255, 255, 1);
+      transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+
+    .arrow-left {
+      left: 10px;
+    }
+
+    .arrow-right {
+      right: 10px;
+    }
+
+    .hidden { display: none; }
+
+    .preview-image {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 5px;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    input[type="text"],
+    input[type="file"] {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ff7e5f;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="file"]:focus {
+      border-color: #feb47b;
+      outline: none;
+    }
+
+    button {
+      background-color: #ff7e5f;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #feb47b;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Modal Styles */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1000; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      padding-top: 60px;
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .slider {
+        height: 200px; /* Reduce height for smaller screens */
+      }
+
+      .quote-box {
+        font-size: 14px; /* Smaller font size for mobile */
+      }
+
+      button {
+        padding: 10px 15px; /* Smaller button padding */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .preview-image {
+        width: 40px; /* Smaller preview images */
+        height: 40px;
+      }
+
+      .container {
+        padding: 10px; /* Less padding on mobile */
+      }
+
+      h1 {
+        font-size: 2rem; /* Smaller heading */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-4xl md:text-5xl font-[Pacifico] text-pink-800 mb-6">Happy Raksha Bandhan 💕</h1>
+
+    <div class="w-full max-w-md px-4 space-y-4 text-center" id="inputSection">
+      <input type="text" id="sisterName" placeholder="Enter your sister's name" />
+
+      <input type="file" id="photoInput" accept="image/*" onchange="handlePhotoUpload()" />
+
+      <p id="photoCount" class="text-sm text-gray-600">0 / 5 uploaded</p>
+
+      <div id="previewContainer" class="flex space-x-2 mt-2"></div>
+
+      <button id="submitBtn" onclick="generateSlider()" disabled>
+        Create Surprise
+      </button>
+      <button id="readQuoteBtn" onclick="openModal()">
+        Read Quote
+      </button>
+    </div>
+
+    <div class="mt-10 hidden" id="sliderSection">
+      <div class="slider">
+        <button class="arrow-btn arrow-left" onclick="prevSlide()">◀</button>
+        <div class="slides" id="sliderContainer">
+          <!-- Slides will be inserted via JS -->
+        </div>
+        <button class="arrow-btn arrow-right" onclick="nextSlide()">▶</button>
+      </div>
+      <div class="quote-box" id="quoteBox"></div>
+    </div>
+
+    <footer>Made with 💖 © VGI @ CODEHUB 2025</footer>
+  </div>
+
+  <!-- The Modal -->
+  <div id="quoteModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Quote</h2>
+      <p id="modalQuote">"You may annoy me like no one else, but you also protect, love, and believe in me like no one else." 💖</p>
+    </div>
+  </div>
+
+  <script>
+    let uploadedPhotos = [];
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    function handlePhotoUpload() {
+      const input = document.getElementById("photoInput");
+      const file = input.files[0];
+      const countText = document.getElementById("photoCount");
+      const previewContainer = document.getElementById("previewContainer");
+
+      if (!file || uploadedPhotos.length >= 5) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        uploadedPhotos.push(e.target.result);
+        countText.textContent = `${uploadedPhotos.length} / 5 uploaded`;
+        
+        // Create an image element for preview
+        const img = document.createElement("img");
+        img.src = e.target.result;
+        img.className = "preview-image"; // Add a class for styling
+        previewContainer.appendChild(img);
+
+        input.value = "";
+        if (uploadedPhotos.length === 5) {
+          document.getElementById("submitBtn").disabled = false;
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function generateSlider() {
+      const name = document.getElementById("sisterName").value.trim();
+      const sliderSection = document.getElementById("sliderSection");
+      const sliderContainer = document.getElementById("sliderContainer");
+      const inputSection = document.getElementById("inputSection");
+      const quoteBox = document.getElementById("quoteBox");
+
+      if (!name || uploadedPhotos.length !== 5) {
+        alert("Please complete all inputs!");
+        return;
+      }
+
+      const quote = `"👽SOME WORDS FOR MY SISTERS👽<br>This full moon day our hearts are in brim<br>
+
+Feeling of faith and serenity in mind.<br>
+
+We light the lamps and our hears glow<br>
+
+Radiance of happiness and peace are in flow.<br>
+
+Harmonious homes are like streams of joy<br>
+
+Flowing and flourishing the landscape en route.<br>
+
+Nobility in heart and character in deed<br>
+
+Righteous homes alone make a beautiful State.<br>
+
+Sisters will tie the thread on the brothers<br>
+
+Abiding them to do only what is right and clean.<br>
+
+Put the Kumkum and blessed rice on the head<br>
+
+
+Where will dwell right thoughts and noble action<br>" 💖 <br>${name}`;
+
+      sliderContainer.innerHTML = uploadedPhotos.map(photo => 
+        `<div class="slide" style="background-image: url('${photo}');"></div>`
+      ).join("");
+
+      quoteBox.innerHTML = quote;
+
+      inputSection.classList.add("hidden");
+      sliderSection.classList.remove("hidden");
+      currentIndex = 0;
+      updateSlider();
+
+      // Start automatic sliding
+      autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    }
+
+    function updateSlider() {
+      const sliderContainer = document.getElementById("sliderContainer");
+      sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      if (currentIndex < uploadedPhotos.length - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0; // Loop back to the first slide
+      }
+      updateSlider();
+    }
+
+    function prevSlide() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = uploadedPhotos.length - 1; // Loop back to the last slide
+      }
+      updateSlider();
+    }
+
+    function openModal() {
+      document.getElementById("quoteModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("quoteModal").style.display = "none";
+    }
+
+    // Close the modal when the user clicks anywhere outside of the modal
+    window.onclick = function(event) {
+      const modal = document.getElementById("quoteModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
