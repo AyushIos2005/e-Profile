@@ -1,0 +1,8 @@
+Imagine  that you have been hired by a bank to desgin a software to plug into their ATM machine.Customer will key in their card numbeer and pin.
+The customer base of the bank is very large. So you might want to store them in a special way/formate for minimum retrieval time.Once the Customer key in proper card number and PIN then the screen will show four options.
+Withdraw cash.
+Desposite cash.
+Balance Check.
+MiniStatement.
+Exit.
+
